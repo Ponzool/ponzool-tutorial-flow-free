@@ -9,4 +9,4 @@ This folder is the installable Godot addon.
 
 The complete guide and demo are available in the source repository. This development preview has only been verified with Godot 4.7.
 
-License status: **not selected**. Do not redistribute this preview until the repository contains an approved `LICENSE` or `LICENSE.md` with a copyright holder.
+License: [MIT](LICENSE), Copyright (c) 2026 PONZOOL.

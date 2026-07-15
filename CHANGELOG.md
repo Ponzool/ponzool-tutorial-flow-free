@@ -2,7 +2,7 @@
 
 ## 0.1.0-dev — 2026-07-15
 
-Development preview; not yet licensed for public distribution.
+MIT-licensed development preview.
 
 ### Added
 

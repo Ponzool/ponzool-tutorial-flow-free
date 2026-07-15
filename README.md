@@ -2,7 +2,7 @@
 
 Event-driven popup tutorials for Godot. Your game decides **when** guidance should appear; Ponzool handles pages, pause restoration, priority queueing, and display history.
 
-> Development preview: verified with Godot 4.7 stable on Windows 64-bit using the Compatibility renderer. Other Godot versions, platforms, and renderers remain unvalidated. Public distribution is blocked until an approved license replaces `LICENSE-REQUIRED.txt`.
+> Development preview: verified with Godot 4.7 stable on Windows 64-bit using the Compatibility renderer. Other Godot versions, platforms, and renderers remain unvalidated.
 
 ![The included demo showing the first-enemy tutorial](docs/media/ponzool-tutorial-flow-demo.webp)
 
@@ -85,6 +85,6 @@ Expected markers are `TESTS PASSED` and `DEMO PASSED`.
 
 GDScript, documentation, and demo copy were created with AI assistance and reviewed through local diff inspection, Godot import, automated tests, and direct demo inspection. Store images are captures of the included demo; no AI-generated graphics or audio are included.
 
-## License status
+## License
 
-No distribution license has been selected. Do not publish or redistribute this preview until `LICENSE-REQUIRED.txt` is replaced by an approved `LICENSE` or `LICENSE.md` and the addon's copy matches it.
+Ponzool Tutorial Flow Free is available under the [MIT License](LICENSE). Copyright (c) 2026 PONZOOL.
