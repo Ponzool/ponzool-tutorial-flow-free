@@ -2,7 +2,7 @@
 
 Event-driven popup tutorials for Godot. Your game decides **when** guidance should appear; Ponzool handles pages, pause restoration, priority queueing, and display history.
 
-> Development preview: verified with Godot 4.7 stable on Windows 64-bit using the Compatibility renderer. Other Godot versions, platforms, and renderers remain unvalidated.
+> Version 0.1.0 is verified with Godot 4.7 stable on Windows 64-bit using the Compatibility renderer. Other Godot versions, platforms, and renderers remain unvalidated.
 
 ![The included demo showing the first-enemy tutorial](docs/media/ponzool-tutorial-flow-demo.webp)
 
@@ -20,7 +20,11 @@ Ponzool does not detect enemies, items, inventory, or player actions. Your game 
 TutorialFlow.trigger("first_enemy_encounter")
 ```
 
-This repository contains the Free popup edition only. Guided Tutorial Pro is a separate product and is not included.
+This repository contains the Free popup edition only. [Ponzool Tutorial Flow Pro](https://ponzool.itch.io/ponzool-tutorial-flow-pro) is a separate product and is not included.
+
+## Need tutorials that follow real player actions?
+
+Free is designed for event-triggered popup explanations. Pro adds non-blocking objectives, markers on live UI and world targets, real-action completion requirements, save and resume, UI recovery, and diagnostics. See [Ponzool Tutorial Flow Pro on itch.io](https://ponzool.itch.io/ponzool-tutorial-flow-pro).
 
 ## Try the inspectable demo
 
@@ -67,7 +71,7 @@ See the [API reference](docs/api.md) and the Resources in [`demo/tutorials/`](de
 
 - No enemy, item, inventory, dialogue, quest, or save-slot system is included.
 - Spotlight targeting, world markers, input blocking, action completion, and branching are not included.
-- The built-in popup supports a custom Godot `Theme`; complete popup-scene replacement is not supported in this preview.
+- The built-in popup supports a custom Godot `Theme`; complete popup-scene replacement is not supported in version 0.1.0.
 - If another system changes `SceneTree.paused` while Ponzool owns the pause, Ponzool restores the state captured when the tutorial sequence began.
 
 ## Verification
@@ -83,7 +87,7 @@ Expected markers are `TESTS PASSED` and `DEMO PASSED`.
 
 ## AI-assisted content
 
-GDScript, documentation, and demo copy were created with AI assistance and reviewed through local diff inspection, Godot import, automated tests, and direct demo inspection. Store images are captures of the included demo; no AI-generated graphics or audio are included.
+GDScript, documentation, demo copy, and the store cover infographic were created with AI assistance and reviewed through local diff inspection, Godot import, automated tests, and direct demo inspection. Store screenshots are captures of the included demo. No AI-generated graphics or audio ship in the addon package.
 
 ## License
 

@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.0-dev — 2026-07-15
+## 0.1.0 — 2026-07-16
 
-MIT-licensed development preview.
+Initial MIT-licensed stable release.
 
 ### Added
 
