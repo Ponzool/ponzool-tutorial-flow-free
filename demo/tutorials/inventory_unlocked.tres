@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PonzoolTutorial" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_definition.gd" id="1_tutorial"]
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_page.gd" id="2_page"]
+
+[sub_resource type="Resource" id="Page_inventory"]
+script = ExtResource("2_page")
+body = "The inventory tutorial waited in the queue until the item tutorial finished. No overlapping popup was created."
+continue_label = "Close"
+
+[resource]
+script = ExtResource("1_tutorial")
+id = &"inventory_unlocked"
+title = "Inventory unlocked"
+pages = Array[ExtResource("2_page")]([SubResource("Page_inventory")])
+pause_game = true
+scope = 1
+priority = 10

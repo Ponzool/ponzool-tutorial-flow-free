@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PonzoolTutorialCatalog" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://demo/tutorials/first_enemy.tres" id="2_enemy"]
+[ext_resource type="Resource" path="res://demo/tutorials/first_item.tres" id="3_item"]
+[ext_resource type="Resource" path="res://demo/tutorials/inventory_unlocked.tres" id="4_inventory"]
+
+[resource]
+script = ExtResource("1_catalog")
+tutorials = Array[Resource]([ExtResource("2_enemy"), ExtResource("3_item"), ExtResource("4_inventory")])

@@ -1,0 +1,8 @@
+PONZOOL TUTORIAL FLOW DEVELOPMENT PREVIEW
+
+No distribution license has been selected for this preview.
+This file is not an open-source license and grants no redistribution rights.
+
+Before any public upload or distribution, replace this file with an approved
+LICENSE or LICENSE.md containing the complete license text, copyright year, and
+copyright holder, and update the store listing to match it.

@@ -1,0 +1,9 @@
+PONZOOL TUTORIAL FLOW PUBLICATION BLOCKER
+
+No distribution license has been selected for this development preview.
+This file is not an open-source license and grants no redistribution rights.
+
+Do not make this repository public, upload its package, or submit it to a store
+until this file and the addon's matching blocker have been replaced by an
+approved LICENSE or LICENSE.md containing the complete license text, copyright
+year, and copyright holder.

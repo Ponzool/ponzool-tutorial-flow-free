@@ -1,0 +1,10 @@
+# Godot editor caches and imported resources
+.godot/
+
+# Local release outputs
+build/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp

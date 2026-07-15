@@ -1,0 +1,151 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://demo/demo.gd" id="1_demo"]
+[ext_resource type="Resource" path="res://demo/tutorials/catalog.tres" id="2_catalog"]
+
+[node name="TutorialFlowDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+script = ExtResource("1_demo")
+catalog = ExtResource("2_catalog")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.035, 0.055, 0.11, 1)
+mouse_filter = 2
+
+[node name="Accent" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+color = Color(0.305, 0.804, 0.768, 1)
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = 44.0
+offset_right = -56.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Header" type="HBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="Brand" type="VBoxContainer" parent="Margin/Layout/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Margin/Layout/Header/Brand"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.305, 0.804, 0.768, 1)
+theme_override_font_sizes/font_size = 34
+text = "Ponzool Tutorial Flow"
+
+[node name="Subtitle" type="Label" parent="Margin/Layout/Header/Brand"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69, 0.76, 0.9, 1)
+theme_override_font_sizes/font_size = 18
+text = "Event-driven tutorials without game-specific UI plumbing"
+
+[node name="ResetButton" type="Button" parent="Margin/Layout/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Reset history"
+
+[node name="Divider" type="HSeparator" parent="Margin/Layout"]
+layout_mode = 2
+theme_override_colors/separator = Color(0.18, 0.27, 0.46, 1)
+
+[node name="Instruction" type="Label" parent="Margin/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Choose an event. The addon pauses the game, displays the matching tutorial, then restores the previous state."
+autowrap_mode = 2
+
+[node name="EventGrid" type="GridContainer" parent="Margin/Layout"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+
+[node name="EnemyEvent" type="Button" parent="Margin/Layout/EventGrid"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.84, 0.63, 1)
+theme_override_font_sizes/font_size = 18
+text = "⚔  Enter enemy zone\nSession scope"
+
+[node name="ItemEvent" type="Button" parent="Margin/Layout/EventGrid"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.74, 0.93, 0.72, 1)
+theme_override_font_sizes/font_size = 18
+text = "◆  Pick up item\nGlobal scope"
+
+[node name="QueueEvent" type="Button" parent="Margin/Layout/EventGrid"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.82, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "≡  Trigger two events\nPriority queue"
+
+[node name="StatusPanel" type="PanelContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="StatusMargin" type="MarginContainer" parent="Margin/Layout/StatusPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="StatusLabel" type="Label" parent="Margin/Layout/StatusPanel/StatusMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.305, 0.804, 0.768, 1)
+theme_override_font_sizes/font_size = 17
+text = "Ready"
+
+[node name="LogTitle" type="Label" parent="Margin/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Event log"
+
+[node name="EventLog" type="RichTextLabel" parent="Margin/Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.75, 0.81, 0.92, 1)
+theme_override_font_sizes/normal_font_size = 16
+scroll_active = true
+
+[connection signal="pressed" from="Margin/Layout/Header/ResetButton" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Margin/Layout/EventGrid/EnemyEvent" to="." method="_on_enemy_pressed"]
+[connection signal="pressed" from="Margin/Layout/EventGrid/ItemEvent" to="." method="_on_item_pressed"]
+[connection signal="pressed" from="Margin/Layout/EventGrid/QueueEvent" to="." method="_on_queue_pressed"]

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PonzoolTutorial" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_definition.gd" id="1_tutorial"]
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_page.gd" id="2_page"]
+
+[sub_resource type="Resource" id="Page_intro"]
+script = ExtResource("2_page")
+body = "An enemy is nearby. Your game is paused while this tutorial is open."
+continue_label = "Show controls"
+
+[sub_resource type="Resource" id="Page_controls"]
+script = ExtResource("2_page")
+body = "Use your game's attack action to defeat enemies. Ponzool only displays this guidance—the combat system remains yours."
+continue_label = "Got it"
+
+[resource]
+script = ExtResource("1_tutorial")
+id = &"first_enemy_encounter"
+title = "Your first enemy"
+pages = Array[ExtResource("2_page")]([SubResource("Page_intro"), SubResource("Page_controls")])
+pause_game = true
+scope = 1
+priority = 50

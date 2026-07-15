@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PonzoolTutorial" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_definition.gd" id="1_tutorial"]
+[ext_resource type="Script" path="res://addons/ponzool_tutorial_flow/tutorial_page.gd" id="2_page"]
+
+[sub_resource type="Resource" id="Page_pickup"]
+script = ExtResource("2_page")
+body = "You picked up your first item. This tutorial is stored in global display history."
+continue_label = "Next"
+
+[sub_resource type="Resource" id="Page_scope"]
+script = ExtResource("2_page")
+body = "Trigger it again and nothing happens—unless your game requests force=true or resets the history."
+continue_label = "Close"
+
+[resource]
+script = ExtResource("1_tutorial")
+id = &"first_item_pickup"
+title = "Item acquired"
+pages = Array[ExtResource("2_page")]([SubResource("Page_pickup"), SubResource("Page_scope")])
+pause_game = true
+scope = 2
+priority = 20

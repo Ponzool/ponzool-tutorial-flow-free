@@ -1,0 +1,36 @@
+; Engine configuration file.
+; Edit through the Godot editor where practical.
+
+config_version=5
+
+[application]
+
+config/name="Ponzool Tutorial Flow Demo"
+config/features=PackedStringArray("4.7")
+run/main_scene="res://demo/main.tscn"
+
+[autoload]
+
+TutorialFlow="*res://addons/ponzool_tutorial_flow/tutorial_flow.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ponzool_tutorial_flow/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
